@@ -1,0 +1,38 @@
+# Never commit API keys or tokens
+.env
+.env.*
+*.key
+*.pem
+.secrets
+credentials.json
+
+# No databases or runtime files
+*.db
+*.db-*
+*.sqlite
+*.wal
+*.shm
+*.pid
+*.lock
+
+# No large binary artifacts
+__pycache__/
+*.pyc
+node_modules/
+venv/
+.venv/
+
+# No cache/models
+models_dev_cache.json
+ollama_cloud_models_cache.json
+cache/
+image_cache/
+audio_cache/
+
+# No sessions or logs
+sessions/
+logs/
+state.db*
+auth.json
+auth.lock
+gateway.log

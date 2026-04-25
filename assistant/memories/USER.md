@@ -1,0 +1,7 @@
+Interested in learning resource/investing. Focus sectors: copper, uranium, solar power, other metals. Wants to track stocks rated by Rick Rule (resource investing expert at Sprott). Has TradingView subscription but it doesn't help for API access. Set up 3 financial APIs for research: Alpha Vantage, Financial Modeling Prep (FMP), Polygon.io. Working on building watchlists with structured scoring framework.
+§
+Resource investing approach: 5-year hold horizon, quality-focused, not a trader. Wants "guaranteed" returns via low-risk, high-quality plays in copper, uranium, solar. Has TradingView subscription. Signed up for CEO.ca. Expects structured analysis with scoring framework, iterative strategy development. Prefers public data over sharing credentials.
+§
+User focuses on resource investing (copper, uranium, solar) with Alpha Vantage/FMP/Polygon.io APIs. Prefers structured analysis with scoring frameworks, iterative strategy development, and public data sources. Requires maintainable workflows with version control for profile-based tasks.
+§
+Software developer (beyond resource investing). Wants high-level planning from me only, leaves implementation to separate agent profiles (arch, eng). Interested in coordinating multiple agent instances with shared systems like inboxes. Has concern/interest in tracking energy usage for AI queries.

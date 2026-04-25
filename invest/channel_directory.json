@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-04-25T14:45:38.841270",
+  "platforms": {
+    "discord": [
+      {
+        "id": "1467270260737576972",
+        "name": "general",
+        "guild": "next level 🦠👤🌎's server",
+        "type": "channel"
+      },
+      {
+        "id": "1476320273572827300",
+        "name": "the-eternal-planet-of-legend",
+        "guild": "next level 🦠👤🌎's server",
+        "type": "channel"
+      },
+      {
+        "id": "1495549074898817154",
+        "name": "nextlevel_90476",
+        "type": "dm",
+        "thread_id": null
+      }
+    ],
+    "telegram": [],
+    "whatsapp": [],
+    "slack": [],
+    "signal": [],
+    "mattermost": [],
+    "matrix": [],
+    "homeassistant": [],
+    "email": [],
+    "sms": [],
+    "dingtalk": [],
+    "feishu": [],
+    "wecom": [],
+    "wecom_callback": [],
+    "weixin": [],
+    "bluebubbles": [],
+    "qqbot": []
+  }
+}

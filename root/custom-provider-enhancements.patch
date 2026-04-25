@@ -1,0 +1,535 @@
+From c613635c2fc051557a29861139e41ca8b320e089 Mon Sep 17 00:00:00 2001
+From: local <local@hermes>
+Date: Mon, 20 Apr 2026 15:31:45 +0000
+Subject: [PATCH] Custom provider enhancements: custom:<name> resolution + live
+ /models probing
+
+These changes add two features to support multiple named custom providers
+(like Chutes) from config.yaml:
+
+1. provider_model_ids(custom:<name>) - resolves the named custom provider
+   from config, probes its /models endpoint, and returns live model list.
+
+2. list_authenticated_providers() section 4 - extracts api_key from
+   custom_providers entries and probes live /models endpoint to discover
+   models beyond what is declared in config.
+
+Both changes are purely additive and preserve all upstream dedup,
+User-Agent, and validation logic.
+---
+ hermes_cli/model_switch.py                    |  29 +-
+ hermes_cli/models.py                          |  22 +
+ tests/hermes_cli/test_custom_name_provider.py | 389 ++++++++++++++++++
+ .../test_model_switch_custom_providers.py     |   2 +
+ 4 files changed, 439 insertions(+), 3 deletions(-)
+ create mode 100644 tests/hermes_cli/test_custom_name_provider.py
+
+diff --git a/hermes_cli/model_switch.py b/hermes_cli/model_switch.py
+index f5dcbc49..f942e6ca 100644
+--- a/hermes_cli/model_switch.py
++++ b/hermes_cli/model_switch.py
+@@ -1128,11 +1128,14 @@ def list_authenticated_providers(
+             if not display_name or not api_url:
+                 continue
+ 
++            api_key = (entry.get("api_key") or "").strip()
++
+             slug = custom_provider_slug(display_name)
+             if slug not in groups:
+                 groups[slug] = {
+                     "name": display_name,
+                     "api_url": api_url,
++                    "api_key": api_key,
+                     "models": [],
+                 }
+             # The singular ``model:`` field only holds the currently
+@@ -1146,6 +1149,10 @@ def list_authenticated_providers(
+             if default_model and default_model not in groups[slug]["models"]:
+                 groups[slug]["models"].append(default_model)
+ 
++            # Propagate api_key if first entry lacked it
++            if api_key and not groups[slug].get("api_key"):
++                groups[slug]["api_key"] = api_key
++
+             cfg_models = entry.get("models", {})
+             if isinstance(cfg_models, dict):
+                 for m in cfg_models:
+@@ -1170,15 +1177,31 @@ def list_authenticated_providers(
+             )
+             if _pair_key[0] and _pair_key[1] and _pair_key in _section3_emitted_pairs:
+                 continue
++
++            # Seed with config-declared models, then try live /models endpoint
++            models_list = list(grp["models"])
++            api_url = grp["api_url"]
++            api_key = grp.get("api_key", "")
++            if api_url:
++                try:
++                    from hermes_cli.models import fetch_api_models
++                    live = fetch_api_models(api_key, api_url, timeout=6.0)
++                    if live:
++                        for m in live:
++                            if m not in models_list:
++                                models_list.append(m)
++                except Exception:
++                    pass  # Non-blocking — show config models if API fails
++
+             results.append({
+                 "slug": slug,
+                 "name": grp["name"],
+                 "is_current": slug == current_provider,
+                 "is_user_defined": True,
+-                "models": grp["models"],
+-                "total_models": len(grp["models"]),
++                "models": models_list[:max_models] if max_models else models_list,
++                "total_models": len(models_list),
+                 "source": "user-config",
+-                "api_url": grp["api_url"],
++                "api_url": api_url,
+             })
+             seen_slugs.add(slug.lower())
+ 
+diff --git a/hermes_cli/models.py b/hermes_cli/models.py
+index 6413c35f..df792fab 100644
+--- a/hermes_cli/models.py
++++ b/hermes_cli/models.py
+@@ -1333,6 +1333,28 @@ def provider_model_ids(provider: Optional[str], *, force_refresh: bool = False)
+             live = fetch_api_models(api_key, base_url)
+             if live:
+                 return live
++
++    # Handle custom:<name> provider format (e.g., custom:chutes)
++    if normalized.startswith("custom:"):
++        from hermes_cli.config import load_config
++        config = load_config()
++        custom_providers = config.get("custom_providers", [])
++
++        # Extract the name part (e.g., "chutes" from "custom:chutes")
++        provider_name = normalized.split(":", 1)[1]
++
++        for entry in custom_providers:
++            if not isinstance(entry, dict):
++                continue
++            display_name = (entry.get("name") or "").strip().lower()
++            if display_name == provider_name or f"custom:{display_name}" == normalized:
++                base_url = entry.get("base_url", "").strip()
++                api_key = entry.get("api_key", "").strip()
++                if base_url:
++                    live = fetch_api_models(api_key, base_url, timeout=8.0)
++                    if live:
++                        return live
++
+     return list(_PROVIDER_MODELS.get(normalized, []))
+ 
+ 
+diff --git a/tests/hermes_cli/test_custom_name_provider.py b/tests/hermes_cli/test_custom_name_provider.py
+new file mode 100644
+index 00000000..0593aa60
+--- /dev/null
++++ b/tests/hermes_cli/test_custom_name_provider.py
+@@ -0,0 +1,389 @@
++"""Tests for custom:<name> provider format in provider_model_ids() and
++live /models probing in list_authenticated_providers().
++
++These features allow:
++1. provider_model_ids("custom:chutes") to resolve named custom providers
++   from config.yaml and probe their /models endpoint.
++2. list_authenticated_providers() to extract api_key from custom_providers
++   entries and augment the model list with live /models probing.
++"""
++
++import pytest
++from unittest.mock import patch, MagicMock
++
++import hermes_cli.providers as providers_mod
++from hermes_cli.model_switch import list_authenticated_providers
++from hermes_cli.models import provider_model_ids
++
++
++# ---------------------------------------------------------------------------
++# provider_model_ids("custom:<name>") tests
++# ---------------------------------------------------------------------------
++
++class TestCustomNameProviderModelIds:
++    """Test that provider_model_ids("custom:<name>") resolves named custom
++    providers from config and probes their /models endpoint."""
++
++    def test_custom_name_returns_live_models(self, monkeypatch):
++        """custom:chutes should return models from the matching provider's
++        /models endpoint."""
++        mock_config = {
++            "custom_providers": [
++                {
++                    "name": "Chutes",
++                    "base_url": "https://llm.chutes.ai/v1",
++                    "api_key": "chutes-key-123",
++                },
++            ]
++        }
++        # load_config is imported deferred from hermes_cli.config
++        monkeypatch.setattr(
++            "hermes_cli.config.load_config", lambda: mock_config
++        )
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models",
++            lambda api_key, base_url, timeout=5.0: [
++                "zai-org/GLM-5.1-TEE",
++                "deepseek/DeepSeek-V3.2",
++            ],
++        )
++
++        result = provider_model_ids("custom:chutes")
++        assert "zai-org/GLM-5.1-TEE" in result
++        assert "deepseek/DeepSeek-V3.2" in result
++
++    def test_custom_name_case_insensitive(self, monkeypatch):
++        """custom:chutes should match a provider named "Chutes" (lowercase compare)."""
++        mock_config = {
++            "custom_providers": [
++                {
++                    "name": "Chutes",
++                    "base_url": "https://llm.chutes.ai/v1",
++                    "api_key": "key",
++                },
++            ]
++        }
++        monkeypatch.setattr(
++            "hermes_cli.config.load_config", lambda: mock_config
++        )
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models",
++            lambda api_key, base_url, timeout=5.0: ["model-a"],
++        )
++
++        result = provider_model_ids("custom:chutes")
++        assert result == ["model-a"]
++
++    def test_custom_name_not_found_falls_through(self, monkeypatch):
++        """custom:unknown should fall through to _PROVIDER_MODELS lookup
++        (which returns [] for unknown providers)."""
++        mock_config = {
++            "custom_providers": [
++                {
++                    "name": "Chutes",
++                    "base_url": "https://llm.chutes.ai/v1",
++                    "api_key": "key",
++                },
++            ]
++        }
++        monkeypatch.setattr(
++            "hermes_cli.config.load_config", lambda: mock_config
++        )
++        # No matching provider → falls through to _PROVIDER_MODELS
++
++        result = provider_model_ids("custom:unknown")
++        assert result == []  # Not in _PROVIDER_MODELS either
++
++    def test_custom_name_api_failure_falls_through(self, monkeypatch):
++        """If fetch_api_models returns None (network error), should fall
++        through to _PROVIDER_MODELS lookup."""
++        mock_config = {
++            "custom_providers": [
++                {
++                    "name": "Chutes",
++                    "base_url": "https://llm.chutes.ai/v1",
++                    "api_key": "key",
++                },
++            ]
++        }
++        monkeypatch.setattr(
++            "hermes_cli.config.load_config", lambda: mock_config
++        )
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models",
++            lambda api_key, base_url, timeout=5.0: None,
++        )
++
++        result = provider_model_ids("custom:chutes")
++        assert result == []  # Falls through to _PROVIDER_MODELS["custom:chutes"] = []
++
++    def test_custom_name_no_base_url_skipped(self, monkeypatch):
++        """An entry without base_url should be skipped."""
++        mock_config = {
++            "custom_providers": [
++                {
++                    "name": "Chutes",
++                    "api_key": "key",
++                    # no base_url
++                },
++            ]
++        }
++        monkeypatch.setattr(
++            "hermes_cli.config.load_config", lambda: mock_config
++        )
++
++        result = provider_model_ids("custom:chutes")
++        assert result == []  # No base_url → skip → fall through
++
++    def test_custom_name_passes_api_key_and_timeout(self, monkeypatch):
++        """The api_key from config and custom timeout should be forwarded
++        to fetch_api_models."""
++        mock_config = {
++            "custom_providers": [
++                {
++                    "name": "Chutes",
++                    "base_url": "https://llm.chutes.ai/v1",
++                    "api_key": "my-secret-key",
++                },
++            ]
++        }
++        monkeypatch.setattr(
++            "hermes_cli.config.load_config", lambda: mock_config
++        )
++
++        captured = {}
++        def mock_fetch(api_key, base_url, timeout=5.0):
++            captured["api_key"] = api_key
++            captured["base_url"] = base_url
++            captured["timeout"] = timeout
++            return ["model-a"]
++
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models", mock_fetch
++        )
++
++        provider_model_ids("custom:chutes")
++        assert captured["api_key"] == "my-secret-key"
++        assert captured["base_url"] == "https://llm.chutes.ai/v1"
++        assert captured["timeout"] == 8.0  # custom timeout
++
++    def test_custom_name_non_dict_entry_skipped(self, monkeypatch):
++        """Non-dict entries in custom_providers should be skipped."""
++        mock_config = {
++            "custom_providers": [
++                "just-a-string",  # not a dict
++                {
++                    "name": "Chutes",
++                    "base_url": "https://llm.chutes.ai/v1",
++                    "api_key": "key",
++                },
++            ]
++        }
++        monkeypatch.setattr(
++            "hermes_cli.config.load_config", lambda: mock_config
++        )
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models",
++            lambda api_key, base_url, timeout=5.0: ["model-a"],
++        )
++
++        result = provider_model_ids("custom:chutes")
++        assert result == ["model-a"]
++
++    def test_custom_name_empty_config(self, monkeypatch):
++        """No custom_providers in config should not crash."""
++        mock_config = {}
++        monkeypatch.setattr(
++            "hermes_cli.config.load_config", lambda: mock_config
++        )
++
++        result = provider_model_ids("custom:chutes")
++        assert result == []
++
++    def test_custom_name_multiple_providers(self, monkeypatch):
++        """When multiple providers exist, only the matching one is probed."""
++        call_log = []
++        mock_config = {
++            "custom_providers": [
++                {
++                    "name": "Other",
++                    "base_url": "https://other.example.com/v1",
++                    "api_key": "other-key",
++                },
++                {
++                    "name": "Chutes",
++                    "base_url": "https://llm.chutes.ai/v1",
++                    "api_key": "chutes-key",
++                },
++            ]
++        }
++        monkeypatch.setattr(
++            "hermes_cli.config.load_config", lambda: mock_config
++        )
++        def mock_fetch(api_key, base_url, timeout=5.0):
++            call_log.append((api_key, base_url))
++            if "chutes" in base_url:
++                return ["chutes-model"]
++            return ["other-model"]
++
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models", mock_fetch
++        )
++
++        # Only the matching "Chutes" entry should be probed
++        result = provider_model_ids("custom:chutes")
++        assert "chutes-model" in result
++
++
++# ---------------------------------------------------------------------------
++# list_authenticated_providers() live probing tests
++# ---------------------------------------------------------------------------
++
++class TestCustomProviderLiveProbing:
++    """Test that list_authenticated_providers() probes /models for custom
++    providers and augments the model list."""
++
++    def test_live_models_appended_to_config_models(self, monkeypatch):
++        """Live /models should add to, not replace, config-declared models."""
++        monkeypatch.setattr("agent.models_dev.fetch_models_dev", lambda: {})
++        monkeypatch.setattr(providers_mod, "HERMES_OVERLAYS", {})
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models",
++            lambda api_key, base_url, timeout=5.0: ["live-model-1", "live-model-2"],
++        )
++
++        providers = list_authenticated_providers(
++            current_provider="openrouter",
++            user_providers={},
++            custom_providers=[
++                {
++                    "name": "TestProvider",
++                    "base_url": "https://api.test.com/v1",
++                    "api_key": "test-key",
++                    "model": "config-model",
++                },
++            ],
++            max_models=50,
++        )
++
++        tp_rows = [p for p in providers if p["name"] == "TestProvider"]
++        assert len(tp_rows) == 1
++        # Config model should be first, then live models appended
++        assert tp_rows[0]["models"][0] == "config-model"
++        assert "live-model-1" in tp_rows[0]["models"]
++        assert "live-model-2" in tp_rows[0]["models"]
++        assert tp_rows[0]["total_models"] == 3
++
++    def test_live_probing_failure_keeps_config_models(self, monkeypatch):
++        """If /models probing fails, config-declared models should still appear."""
++        monkeypatch.setattr("agent.models_dev.fetch_models_dev", lambda: {})
++        monkeypatch.setattr(providers_mod, "HERMES_OVERLAYS", {})
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models",
++            lambda api_key, base_url, timeout=5.0: None,
++        )
++
++        providers = list_authenticated_providers(
++            current_provider="openrouter",
++            user_providers={},
++            custom_providers=[
++                {
++                    "name": "TestProvider",
++                    "base_url": "https://api.test.com/v1",
++                    "api_key": "test-key",
++                    "model": "config-model",
++                },
++            ],
++            max_models=50,
++        )
++
++        tp_rows = [p for p in providers if p["name"] == "TestProvider"]
++        assert len(tp_rows) == 1
++        assert tp_rows[0]["models"] == ["config-model"]
++
++    def test_live_models_deduplicated_with_config(self, monkeypatch):
++        """If a live model duplicates a config model, it shouldn't appear twice."""
++        monkeypatch.setattr("agent.models_dev.fetch_models_dev", lambda: {})
++        monkeypatch.setattr(providers_mod, "HERMES_OVERLAYS", {})
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models",
++            lambda api_key, base_url, timeout=5.0: [
++                "config-model",  # already in config
++                "new-model",
++            ],
++        )
++
++        providers = list_authenticated_providers(
++            current_provider="openrouter",
++            user_providers={},
++            custom_providers=[
++                {
++                    "name": "TestProvider",
++                    "base_url": "https://api.test.com/v1",
++                    "api_key": "test-key",
++                    "model": "config-model",
++                },
++            ],
++            max_models=50,
++        )
++
++        tp_rows = [p for p in providers if p["name"] == "TestProvider"]
++        assert tp_rows[0]["models"].count("config-model") == 1
++
++    def test_api_key_extracted_from_custom_provider(self, monkeypatch):
++        """api_key from custom_providers entries should be propagated to fetch_api_models."""
++        monkeypatch.setattr("agent.models_dev.fetch_models_dev", lambda: {})
++        monkeypatch.setattr(providers_mod, "HERMES_OVERLAYS", {})
++
++        captured = {}
++        def mock_fetch(api_key, base_url, timeout=5.0):
++            captured["api_key"] = api_key
++            captured["base_url"] = base_url
++            return ["some-model"]
++
++        monkeypatch.setattr("hermes_cli.models.fetch_api_models", mock_fetch)
++
++        providers = list_authenticated_providers(
++            current_provider="openrouter",
++            user_providers={},
++            custom_providers=[
++                {
++                    "name": "TestProvider",
++                    "base_url": "https://api.test.com/v1",
++                    "api_key": "my-secret-key",
++                    "model": "default-model",
++                },
++            ],
++            max_models=50,
++        )
++
++        assert captured.get("api_key") == "my-secret-key"
++        assert captured.get("base_url") == "https://api.test.com/v1"
++
++    def test_max_models_truncates_expanded_list(self, monkeypatch):
++        """max_models should truncate the combined config+live model list."""
++        monkeypatch.setattr("agent.models_dev.fetch_models_dev", lambda: {})
++        monkeypatch.setattr(providers_mod, "HERMES_OVERLAYS", {})
++        monkeypatch.setattr(
++            "hermes_cli.models.fetch_api_models",
++            lambda api_key, base_url, timeout=5.0: [
++                "live-a", "live-b", "live-c",
++            ],
++        )
++
++        providers = list_authenticated_providers(
++            current_provider="openrouter",
++            user_providers={},
++            custom_providers=[
++                {
++                    "name": "TestProvider",
++                    "base_url": "https://api.test.com/v1",
++                    "model": "config-model",
++                },
++            ],
++            max_models=2,  # Only 2 models allowed
++        )
++
++        tp_rows = [p for p in providers if p["name"] == "TestProvider"]
++        assert len(tp_rows[0]["models"]) == 2
++        assert tp_rows[0]["total_models"] == 4  # total discovered, not truncated
+diff --git a/tests/hermes_cli/test_model_switch_custom_providers.py b/tests/hermes_cli/test_model_switch_custom_providers.py
+index 2bd7edbf..f5db60e3 100644
+--- a/tests/hermes_cli/test_model_switch_custom_providers.py
++++ b/tests/hermes_cli/test_model_switch_custom_providers.py
+@@ -109,6 +109,8 @@ def test_list_groups_same_name_custom_providers_into_one_row(monkeypatch):
+     with all models collected, not N duplicate rows."""
+     monkeypatch.setattr("agent.models_dev.fetch_models_dev", lambda: {})
+     monkeypatch.setattr(providers_mod, "HERMES_OVERLAYS", {})
++    # Disable live /models probing so the test is deterministic
++    monkeypatch.setattr("hermes_cli.models.fetch_api_models", lambda *a, **k: None)
+ 
+     providers = list_authenticated_providers(
+         current_provider="openrouter",
+-- 
+2.43.0
+
