@@ -1,11 +1,12 @@
 # Hermes Profiles Backup
 
-Profile configurations, persistent memories, custom patches, and gateway state for the [Hermes Agent](https://github.com/NousResearch/hermes-agent) instance.
+Profile configurations, persistent memories, custom patches, and **per-profile skills** for the [Hermes Agent](https://github.com/NousResearch/hermes-agent) instance.
 
 ## Stats
 
 - **6 profiles**: `architect`, `assistant`, `engineer`, `invest`, `research`, `cron`
-- **~316 KB** total (configs, memories, cron outputs, patch file)
+- **Per-profile skills** included (architect: 90, assistant: 86, engineer: 86, invest: 86, research: 84)
+- **~54 MB** total
 - **API keys sanitized** — all `api_key` fields are empty strings; restore from your own `.env`
 
 ## What's Included
@@ -16,22 +17,32 @@ Profile configurations, persistent memories, custom patches, and gateway state f
 | `<profile>/memories/MEMORY.md` | Persistent cross-session notes |
 | `<profile>/memories/USER.md` | User profile for that profile |
 | `<profile>/SOUL.md` | Personality prompt |
+| `<profile>/skills/` | Per-profile skill selection (each profile loads a subset of the full catalog) |
 | `<profile>/gateway_state.json` | Gateway platform configuration |
 | `<profile>/channel_directory.json` | Home channel mapping |
-| `<profile>/gateway.pid` | Process ID (reference only) |
 | `cron/output/` | Generated research reports and equity summaries |
 | `root/custom-provider-enhancements.patch` | Custom Chutes provider patch (22+29 lines + 14 tests) |
 | `root/config.yaml` | Root/default configuration |
 | `root/memories/` | Root-level persistent memories |
 
-## What's **Excluded** (Secrets & Ephemeral State)
+## Per-Profile Skill Differences
+
+Each profile has its own curated skill set. Key unique skills per profile:
+
+| Profile | Unique Skills |
+|---------|--------------|
+| **architect** | `hermes-update`, `hermes-restart-gateways`, `hermes-agent-patch`, `multi-agent-communication-pattern`, `pixel-art` |
+| **assistant** | `chutes-custom-provider-fix` |
+| **engineer** | `hermes-cli-internals`, `hermes-custom-provider-fix` |
+| **invest** | `bittensor-subnet-research` |
+
+## What's Excluded (Secrets & Ephemeral State)
 
 - `.env` files (API keys, tokens)
 - `auth.json` / `auth.lock`
 - `state.db` / `sessions/` / `logs/`
 - `*.lock` files
 - `cache/`, `models_dev_cache.json`
-- `skills/` (backed up separately in [`hermes-skills`](https://github.com/rise-agent/hermes-skills))
 
 ## How to Restore
 
@@ -45,11 +56,12 @@ Profile configurations, persistent memories, custom patches, and gateway state f
    hermes profile create cron
    ```
 
-2. Copy configs and memories:
+2. Copy configs, memories, and skills:
    ```bash
    for profile in architect assistant engineer invest research cron; do
        cp hermes-profiles/$profile/config.yaml ~/.hermes/profiles/$profile/
        cp -r hermes-profiles/$profile/memories/* ~/.hermes/profiles/$profile/memories/
+       cp -r hermes-profiles/$profile/skills/* ~/.hermes/profiles/$profile/skills/
        [ -f hermes-profiles/$profile/SOUL.md ] && \
            cp hermes-profiles/$profile/SOUL.md ~/.hermes/profiles/$profile/
    done
@@ -65,7 +77,6 @@ Profile configurations, persistent memories, custom patches, and gateway state f
    ```bash
    for profile in architect assistant engineer invest research; do
        cp ~/.hermes/.env ~/.hermes/profiles/$profile/.env
-       # Or create profile-specific .env files
    done
    ```
 
@@ -86,4 +97,4 @@ See also: [`hermes-agent-patch` skill](https://github.com/rise-agent/hermes-skil
 
 ## Companion Repo
 
-- [`rise-agent/hermes-skills`](https://github.com/rise-agent/hermes-skills) — 92 skills across all categories
+- [`rise-agent/hermes-skills`](https://github.com/rise-agent/hermes-skills) — 92 skills (global unified view)
