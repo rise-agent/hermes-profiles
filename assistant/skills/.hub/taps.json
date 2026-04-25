@@ -1,0 +1,8 @@
+{
+  "taps": [
+    {
+      "repo": "JuliusBrussee/caveman",
+      "path": "skills/"
+    }
+  ]
+}

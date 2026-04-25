@@ -1,0 +1,7 @@
+ticker,name,sector,jurisdiction,market_cap_b,score_people,score_property,score_politics,score_phinance,score_paper,composite_score,rating,last_close,change_pct,target_entry,target_scale_in,target_full,position_size_pct,notes,vs_target,nav_per_share
+FCX,Freeport-McMoRan,Copper/Gold,USA/Indonesia,97,4,4,3,4,2,3.4,Satellite,61.48,-1.27,50.63,56.96,63.28,5,+111% run; insider selling $35M; P/E 46; wait for 10% correction,ABOVE,63.28
+SCCO,Southern Copper,Copper,Peru/Mexico,143,3,5,2,4,2,3.2,Satellite,182.25,-2.91,24.38,27.43,30.48,4,Lowest cost curve; Peru political risk; CEO transition,ABOVE,30.48
+COPX,Global X Copper Miners ETF,ETF,Global,3,3,3,3,3,3,3.0,Satellite,82.46,-1.53,74.00,76.00,80.00,3,Diversified juniors/majors; use as sector proxy,ABOVE,
+ERO,Ero Copper,Copper,Brazil,2,4,3,3,3,3,3.2,Satellite,27.27,0.63,7.95,8.94,9.94,3,High-grade Brazil underground; good mgmt; smaller scale,ABOVE,9.94
+HBM,Hudbay Minerals,Copper/Zinc,Canada/Peru,3,3,3,3,3,3,3.0,Satellite,24.02,-0.78,4.58,5.15,5.72,3,Re-rating story; Constancia + Snow Lake; watch balance sheet,ABOVE,5.72
+WRN,Western Copper & Gold,Copper/Gold Dev,Canada,0.4,3,4,4,2,2,3.0,Satellite,2.76,-0.72,7.07,7.96,8.84,2,Casino project; developer stage; permitting risk; optionality,AT/BUY,8.84

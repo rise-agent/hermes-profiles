@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "sources": {
+    "equity_prices": {
+      "description": "Polygon.io prior-day close for watchlist tickers",
+      "method": "polygon_prev",
+      "enabled": true,
+      "periodicity": {
+        "type": "weekdays",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "time_utc": "07:00"
+      },
+      "last_updated": "2026-04-24T07:11:38Z",
+      "last_status": "ok",
+      "last_error": null,
+      "next_update": "2026-04-27T07:00:00Z",
+      "tickers": [
+        "FCX",
+        "SCCO",
+        "COPX",
+        "ERO",
+        "HBM",
+        "WRN",
+        "CCJ",
+        "UUUU",
+        "DNN",
+        "NXE",
+        "URA",
+        "URNM",
+        "URNJ",
+        "FSLR",
+        "ENPH",
+        "SEDG",
+        "RUN",
+        "SHLS",
+        "ICLN",
+        "TAN",
+        "NTR",
+        "MOS",
+        "CF",
+        "ICL",
+        "SQM",
+        "IPI",
+        "UAN",
+        "LXU",
+        "CTVA",
+        "FMC",
+        "AVD",
+        "DE",
+        "AGCO",
+        "CNHI",
+        "TWI",
+        "ADM",
+        "ANDE",
+        "REX",
+        "LAND",
+        "FPI",
+        "NRP",
+        "SMG",
+        "LNN",
+        "CMP",
+        "ALCO"
+      ]
+    },
+    "commodity_spot": {
+      "description": "Kitco spot prices for Cu, Ni, Al, Zn, Pb, Au",
+      "method": "kitco_scrape",
+      "enabled": true,
+      "periodicity": {
+        "type": "days_of_week",
+        "days": [
+          1,
+          4
+        ],
+        "time_utc": "07:15"
+      },
+      "last_updated": "2026-04-24T03:03:19Z",
+      "last_status": "ok",
+      "last_error": null,
+      "next_update": "2026-04-27T07:15:00Z",
+      "commodities": [
+        {
+          "symbol": "XCU",
+          "name": "Copper",
+          "unit": "USD/lb"
+        },
+        {
+          "symbol": "NI",
+          "name": "Nickel",
+          "unit": "USD/lb"
+        },
+        {
+          "symbol": "XAU",
+          "name": "Gold",
+          "unit": "USD/oz"
+        }
+      ]
+    },
+    "composite_scores": {
+      "description": "Manual 5P score refresh from research notes",
+      "method": "manual_csv",
+      "enabled": true,
+      "periodicity": {
+        "type": "monthly",
+        "day_of_month": 1,
+        "time_utc": "08:00"
+      },
+      "last_updated": "2026-04-24T03:03:19Z",
+      "last_status": "ok",
+      "last_error": null,
+      "next_update": "2026-05-01T08:00:00Z",
+      "note": "Requires manual review; auto-flag only"
+    },
+    "news_sentiment": {
+      "description": "Alpha Vantage NEWS_SENTIMENT for watchlist",
+      "method": "alphavantage_news",
+      "enabled": false,
+      "periodicity": {
+        "type": "weekly",
+        "day_of_week": 1,
+        "time_utc": "08:30"
+      },
+      "last_updated": null,
+      "last_status": null,
+      "last_error": null,
+      "next_update": null,
+      "note": "Disabled: 25 calls/day quota too restrictive for bulk"
+    },
+    "uranium_spot": {
+      "description": "U3O8 spot proxy via URNM/URA spread or Cameco guidance",
+      "method": "derived",
+      "enabled": true,
+      "periodicity": {
+        "type": "weekly",
+        "day_of_week": 1,
+        "time_utc": "07:30"
+      },
+      "last_updated": "2026-04-24T03:03:19Z",
+      "last_status": "ok",
+      "last_error": null,
+      "next_update": "2026-04-27T07:30:00Z",
+      "note": "Records CCJ premium/discount to long-term assumptions"
+    },
+    "macro_indicators": {
+      "description": "Fed funds, DXY, 10Y yield, copper warehouse stocks",
+      "method": "manual",
+      "enabled": false,
+      "periodicity": {
+        "type": "quarterly",
+        "months": [
+          1,
+          4,
+          7,
+          10
+        ],
+        "day_of_month": 15,
+        "time_utc": "09:00"
+      },
+      "last_updated": null,
+      "last_status": null,
+      "last_error": null,
+      "next_update": null,
+      "note": "Toggled manually around earnings/FOMC/inventory releases"
+    }
+  }
+}

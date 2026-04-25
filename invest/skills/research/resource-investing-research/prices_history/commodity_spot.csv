@@ -1,0 +1,7 @@
+date,symbol,name,unit,price,source
+2026-04-24,XAU,Gold,USD/oz,4676.2,kitco
+2026-04-24,XAG,Silver,USD/oz,75.037,kitco
+2026-04-24,XCU,Copper,dollar per mt,12528.7095,alphavantage
+2026-04-24,XAU,Gold,USD/oz,4673.5,kitco
+2026-04-24,XAG,Silver,USD/oz,74.909,kitco
+2026-04-24,XCU,Copper,USD/mt,12528.7095,alphavantage

@@ -1,0 +1,130 @@
+netuid,name,symbol,stage,price_tao,price_usd,fundamental_mid_usd,uid_fill_pct,verdict
+0,root,Τ,Root,1.0,249.02,0.0,100.0,Speculative
+1,Apex,α,Early,0.011102038,2.7646,1.0546,100.0,Expensive
+2,DSperse,β,Early,0.006792813,1.6915,1.2656,100.0,Fair
+3,deprecated,γ,Speculative,0.024059664,5.9913,0.0,100.0,Speculative
+4,Targon,δ,Early,0.058158955,14.4827,5.0623,100.0,Expensive
+5,Hone,ε,Speculative,0.019398105,4.8305,0.0,100.0,Speculative
+6,Numinous,ζ,Speculative,0.005206294,1.2965,0.0,100.0,Speculative
+7,Allways,η,Speculative,0.004422628,1.1013,0.0,100.0,Speculative
+8,Vanta,θ,Early,0.036704972,9.1403,2.5312,100.0,Bubble
+9,iota,ι,Speculative,0.023636946,5.8861,0.0,100.0,Speculative
+10,Swap,κ,Speculative,0.006225288,1.5502,0.0,100.0,Speculative
+11,TrajectoryRL,λ,Speculative,0.013379739,3.3318,0.0,100.0,Speculative
+12,Compute Horde,μ,Speculative,0.006716286,1.6725,0.0,100.0,Speculative
+13,Data Universe,ν,Speculative,0.008227405,2.0488,0.0,100.0,Speculative
+14,TAOHash,テ,Speculative,0.009218338,2.2956,0.0,100.0,Speculative
+15,ORO,ο,Early,0.034190565,8.5141,0.0,100.0,Speculative
+16,BitAds,π,Speculative,0.00471593,1.1744,0.0,100.0,Speculative
+17,404—GEN,ρ,Speculative,0.014995967,3.7343,0.0,100.0,Speculative
+18,Zeus,σ,Speculative,0.006988429,1.7403,0.0,100.0,Speculative
+19,blockmachine,t,Speculative,0.015098763,3.7599,0.0,100.0,Speculative
+20,GroundLayer,υ,Speculative,0.00408041,1.0161,0.0,100.0,Speculative
+21,AdTAO,φ,Speculative,0.004935381,1.229,0.0,100.0,Speculative
+22,Desearch,χ,Speculative,0.005131652,1.2779,0.0,100.0,Speculative
+23,Trishool,ψ,Speculative,0.003964517,0.9872,0.0,100.0,Speculative
+24,Quasar,ω,Speculative,0.016005087,3.9856,0.0,100.0,Speculative
+25,Mainframe,א,Speculative,0.004851988,1.2082,0.0,100.0,Speculative
+26,beqar,ב,Speculative,0.003366071,0.8382,0.0,100.0,Speculative
+27,Nodexo,ג,Speculative,0.004278549,1.0654,0.0,100.0,Speculative
+28,gm,ד,Speculative,0.011332156,2.8219,0.0,100.0,Speculative
+29,Coldint,ה,Speculative,0.013879304,3.4562,0.0,100.0,Speculative
+30,Pending,ו,Speculative,0.004722724,1.1761,0.0,100.0,Speculative
+31,Halftime,ז,Speculative,0.004738117,1.1799,0.0,100.0,Speculative
+32,ItsAI,ח,Speculative,0.00370767,0.9233,0.0,100.0,Speculative
+33,ReadyAI,ט,Speculative,0.008331647,2.0747,0.0,100.0,Speculative
+34,BitMind,י,Early,0.014105329,3.5125,1.0546,100.0,Bubble
+35,OxMarkets,ך,Speculative,0.006401908,1.5942,0.0,100.0,Speculative
+36,automata,כ,Speculative,0.006840097,1.7033,0.0,24.61,Speculative
+37,Aurelius,ל,Speculative,0.004163657,1.0368,0.0,100.0,Speculative
+38,colosseum,ם,Speculative,0.011369419,2.8312,0.0,100.0,Speculative
+39,deprecated,מ,Speculative,0.006533074,1.6269,0.0,100.0,Speculative
+40,Chunking,ן,Speculative,0.003423333,0.8525,0.0,100.0,Speculative
+41,Almanac,נ,Speculative,0.005415172,1.3485,0.0,100.0,Speculative
+42,Unknown,ס,Speculative,0.003613353,0.8998,0.0,100.0,Speculative
+43,Graphite,ע,Speculative,0.006147211,1.5308,0.0,100.0,Speculative
+44,Score,ף,Early,0.034576587,8.6103,0.0,100.0,Speculative
+45,Talisman AI,פ,Speculative,0.004179578,1.0408,0.0,100.0,Speculative
+46,RESI,ץ,Speculative,0.006668233,1.6605,0.0,100.0,Speculative
+47,EvolAI,צ,Speculative,0.004942893,1.2309,0.0,18.75,Speculative
+48,Quantum Compute,ק,Speculative,0.005368211,1.3368,0.0,100.0,Speculative
+49,Nepher Robotics,ר,Speculative,0.00528259,1.3155,0.0,100.0,Speculative
+50,Synth,ש,Speculative,0.008892013,2.2143,0.0,100.0,Speculative
+51,lium.io,ת,Early,0.056111478,13.9729,0.0,100.0,Speculative
+52,Dojo,ا,Speculative,0.007305758,1.8193,0.0,100.0,Speculative
+53,EfficientFrontier,ب,Speculative,0.005193926,1.2934,0.0,100.0,Speculative
+54,Yanez MIID,ت,Speculative,0.006336297,1.5779,0.0,100.0,Speculative
+55,NIOME,ث,Speculative,0.003531499,0.8794,0.0,100.0,Speculative
+56,Gradients,ج,Early,0.02171234,5.4068,0.0,100.0,Speculative
+57,Sparket.AI,ح,Speculative,0.003169401,0.7892,0.0,100.0,Speculative
+58,Handshake,خ,Speculative,0.004815061,1.199,0.0,100.0,Speculative
+59,Babelbit,د,Speculative,0.003973445,0.9895,0.0,100.0,Speculative
+60,Bitsec.ai,ذ,Speculative,0.004607382,1.1473,0.0,100.0,Speculative
+61,RedTeam,ر,Speculative,0.00424158,1.0562,0.0,100.0,Speculative
+62,Ridges,ز,Early,0.028935121,7.2054,0.0,100.0,Speculative
+63,Enigma,س,Speculative,0.0093997,2.3407,0.0,100.0,Speculative
+64,Chutes,ش,Maturing,0.082831506,20.6267,10.5465,100.0,Expensive
+65,TAO Private Network,ص,Speculative,0.004144861,1.0322,0.0,100.0,Speculative
+66,ninja,ض,Speculative,0.014769264,3.6778,0.0,100.0,Speculative
+67,Harnyx,ط,Speculative,0.008217953,2.0464,0.0,100.0,Speculative
+68,NOVA,ظ,Early,0.016819475,4.1884,0.0,100.0,Speculative
+69,ain,ع,Speculative,0.003308782,0.824,0.0,100.0,Speculative
+70,NexisGen,غ,Speculative,0.00672783,1.6754,0.0,70.31,Speculative
+71,Leadpoet,ㄴ,Speculative,0.006740408,1.6785,0.0,100.0,Speculative
+72,StreetVision by NATIX,ق,Speculative,0.003359005,0.8365,0.0,100.0,Speculative
+73,MetaHash,ك,Speculative,0.004603045,1.1463,0.0,100.0,Speculative
+74,Gittensor,ل,Speculative,0.006599498,1.6434,0.0,100.0,Speculative
+75,Hippius,م,Early,0.024493543,6.0994,0.0,100.0,Speculative
+76,Byzantium,ن,Speculative,0.005990435,1.4917,0.0,16.8,Speculative
+77,Liquidity,ه,Speculative,0.004274778,1.0645,0.0,100.0,Speculative
+78,Vocence,و,Speculative,0.008189538,2.0394,0.0,16.8,Speculative
+79,MVTRX,ي,Speculative,0.005705538,1.4208,0.0,100.0,Speculative
+80,dogelayer,ى,Speculative,0.003724819,0.9276,0.0,87.89,Speculative
+81,deprecated,ᚠ,Speculative,0.00858008,2.1366,0.0,100.0,Speculative
+82,uruz,ᚢ,Speculative,0.00878709,2.1882,0.0,5.08,Speculative
+83,CliqueAI,ᚦ,Speculative,0.005221912,1.3004,0.0,100.0,Speculative
+84,ChipForge (Tatsu),モ,Speculative,0.003199805,0.7968,0.0,100.0,Speculative
+85,Vidaio,ᚱ,Early,0.012095387,3.012,0.0,100.0,Speculative
+86,⚒,ᚳ,Speculative,0.004034644,1.0047,0.0,100.0,Speculative
+87,Luminar Network,Ы,Speculative,0.003893418,0.9695,0.0,100.0,Speculative
+88,Investing,ᛉ,Speculative,0.003684921,0.9176,0.0,100.0,Speculative
+89,InfiniteHash,ᛒ,Speculative,0.00377042,0.9389,0.0,100.0,Speculative
+90,ogham, ,Speculative,0.004477631,1.115,0.0,100.0,Speculative
+91,Bitstarter #1,ᚁ,Early,0.011547083,2.8755,0.0,100.0,Speculative
+92,TensorClaw,ᚂ,Speculative,0.00394531,0.9825,0.0,100.0,Speculative
+93,Bitcast,ᚃ,Early,0.014610208,3.6382,0.0,100.0,Speculative
+94,Bitsota,ᚄ,Speculative,0.003617407,0.9008,0.0,100.0,Speculative
+95,nion,ᚅ,Early,0.027633853,6.8814,0.0,100.0,Speculative
+96,Verathos,᚛,Speculative,2.966089785,738.6157,0.0,97.66,Bubble
+97,distil,ა,Early,0.048579724,12.0973,0.0,100.0,Speculative
+98,ForeverMoney,ბ,Speculative,0.004235424,1.0547,0.0,100.0,Speculative
+99,Leoma,გ,Speculative,0.006069642,1.5115,0.0,100.0,Speculative
+100,Plaτform,დ,Speculative,0.014988781,3.7325,0.0,100.0,Speculative
+101,eni,ე,Speculative,0.004057193,1.0103,0.0,100.0,Speculative
+102,ConnitoAI,ვ,Speculative,0.013695038,3.4103,0.0,100.0,Speculative
+103,Djinn,Ա,Speculative,0.005769276,1.4367,0.0,100.0,Speculative
+104,for sale (burn to uid1),Բ,Speculative,0.003711996,0.9244,0.0,100.0,Speculative
+105,Beam,Գ,Early,0.01000925,2.4925,0.0,100.0,Speculative
+106,VoidAI,Դ,Speculative,0.004202177,1.0464,0.0,100.0,Speculative
+107,Minos,ミ,Early,0.016108092,4.0112,0.0,100.0,Speculative
+108,TalkHead,Զ,Speculative,0.004040895,1.0063,0.0,48.83,Speculative
+109,Academia,՞,Speculative,0.00414439,1.032,0.0,100.0,Speculative
+110,Green Compute,Ѐ,Speculative,0.005916199,1.4733,0.0,100.0,Speculative
+111,oneoneone,Ё,Speculative,0.004256891,1.0601,0.0,100.0,Speculative
+112,minotaur,Ђ,Speculative,0.005380116,1.3398,0.0,100.0,Speculative
+113,TensorUSD,Ѓ,Speculative,0.004984061,1.2411,0.0,49.22,Speculative
+114,SOMA,Є,Early,0.009724775,2.4217,0.0,100.0,Speculative
+115,HashiChain,Ѕ,Speculative,0.007900633,1.9674,0.0,100.0,Speculative
+116,TaoLend,ⴵ,Speculative,0.00362445,0.9026,0.0,100.0,Speculative
+117,BrainPlay,Ⲁ,Speculative,0.003388612,0.8438,0.0,100.0,Speculative
+118,HODL,ⲁ,Speculative,0.004012443,0.9992,0.0,100.0,Speculative
+119,Satori,Ⲃ,Speculative,0.006173402,1.5373,0.0,100.0,Speculative
+120,Affine,ⴷ,Early,0.071558006,17.8194,0.0,100.0,Speculative
+121,sundae_bar,Ⲅ,Speculative,0.007139824,1.778,0.0,100.0,Speculative
+122,Bitrecs,ⲅ,Speculative,0.003356199,0.8358,0.0,100.0,Speculative
+123,MANTIS,𑀀,Speculative,0.004482998,1.1164,0.0,100.0,Speculative
+124,Swarm,𑀁,Speculative,0.007180798,1.7882,0.0,100.0,Speculative
+125,8 Ball,𑀂,Speculative,0.005826854,1.451,0.0,100.0,Speculative
+126,Poker44,𑀃,Speculative,0.006770657,1.686,0.0,100.0,Speculative
+127,Astrid,𑀅,Speculative,0.004883234,1.216,0.0,100.0,Speculative
+128,ByteLeap,න,Speculative,0.003331294,0.8296,0.0,100.0,Speculative

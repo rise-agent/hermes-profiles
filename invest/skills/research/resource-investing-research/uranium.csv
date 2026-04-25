@@ -1,0 +1,8 @@
+ticker,name,sector,jurisdiction,market_cap_b,score_people,score_property,score_politics,score_phinance,score_paper,composite_score,rating,last_close,change_pct,target_entry,target_scale_in,target_full,position_size_pct,notes,vs_target,nav_per_share
+CCJ,Cameco,Uranium,Canada/USA/Kazakhstan,26,5,4,3,4,3,3.8,Satellite,123.85,-4.1,11.85,13.33,14.81,8,Largest producer; Inkai JV; conservative mgmt; quality anchor,ABOVE,14.81
+UUUU,Energy Fuels,Uranium/REE,USA,1.2,4,3,4,3,3,3.4,Satellite,21.91,-1.62,0.24,0.27,0.3,3,US producer; White Mesa mill; REE pivot; political premium,ABOVE,0.3
+DNN,Denison Mines,Uranium Dev,Canada,1.5,4,4,4,3,3,3.6,Satellite,3.92,-1.01,1.97,2.22,2.47,3,Wheel River; ISR development; permitting progress,ABOVE,2.47
+NXE,NexGen Energy,Uranium Dev,Canada,4,4,5,4,3,2,3.6,Satellite,12.71,-2.98,6.17,6.94,7.72,4,Arrow deposit; best undeveloped asset globally; financing risk,ABOVE,7.72
+URA,Global X Uranium ETF,ETF,Global,3,3,3,3,3,3,3.0,Satellite,56.47,-2.91,,,,3,Diversified uranium exposure; use for sector beta,,
+URNM,Sprott Uranium Miners ETF,ETF,Global,2,3,3,3,3,3,3.0,Satellite,69.13,-3.44,,,,2,Concentrated producer dev exposure; Sprott liquidity,,
+URNJ,Sprott Junior Uranium Miners ETF,ETF,Global,0.5,3,3,3,3,3,3.0,Satellite,32.48,-3.22,,,,2,High-beta juniors; volatile; only for speculation,,

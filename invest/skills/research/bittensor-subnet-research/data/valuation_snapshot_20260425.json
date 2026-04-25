@@ -1,0 +1,2483 @@
+{
+  "meta": {
+    "tao_price_usd": "249.02",
+    "total_subnets_on_chain": "129",
+    "price_csv": "data/subnet_prices_20260425.csv",
+    "valuation_date": "2026-04-25T04:32:28.048209+00:00"
+  },
+  "summary": {
+    "generated_at": "2026-04-25T04:32:28.048179+00:00",
+    "subnets_evaluated": 129,
+    "verdict_distribution": {
+      "Attractive": 0,
+      "Fair": 1,
+      "Expensive": 3,
+      "Bubble": 3,
+      "Speculative": 122,
+      "Dying": 0
+    },
+    "suggested_basket": [
+      {
+        "netuid": "2",
+        "name": "DSperse",
+        "symbol": "\u03b2",
+        "price_usd": 1.6915,
+        "verdict": "Fair",
+        "fundamental_mid_usd": 1.2656
+      }
+    ]
+  },
+  "valuations": [
+    {
+      "netuid": "0",
+      "name": "root",
+      "symbol": "\u03a4",
+      "price_tao": 1.0,
+      "price_usd": 249.02,
+      "tao_price_usd": 249.02,
+      "stage": "Root",
+      "use_case": "TAO staking, validator rewards, network security",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Not a subnet token \u2014 value = PV of all future subnet emissions + staking yield. Metcalfe's Law \u00d7 network growth."
+    },
+    {
+      "netuid": "1",
+      "name": "Apex",
+      "symbol": "\u03b1",
+      "price_tao": 0.011102038,
+      "price_usd": 2.7646,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Algorithmic and agentic optimization competitions",
+      "fundamental_low_usd": 0.4219,
+      "fundamental_high_usd": 1.6874,
+      "fundamental_mid_usd": 1.0546,
+      "uid_fill_pct": 100.0,
+      "verdict": "Expensive",
+      "risk_flags": [
+        "\ud83d\udfe0 Price above fundamental range but <2\u00d7"
+      ],
+      "notes": "Comparable to internal quant development / Kaggle-style prize pools. Niche but active community."
+    },
+    {
+      "netuid": "2",
+      "name": "DSperse",
+      "symbol": "\u03b2",
+      "price_tao": 0.006792813,
+      "price_usd": 1.6915,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Verifiable distributed LLM inference",
+      "fundamental_low_usd": 0.5062,
+      "fundamental_high_usd": 2.0249,
+      "fundamental_mid_usd": 1.2656,
+      "uid_fill_pct": 100.0,
+      "verdict": "Fair",
+      "risk_flags": [
+        "\ud83d\udfe1 Price within fundamental range"
+      ],
+      "notes": "Replacement for OpenAI/Anthropic/Together AI API spend. Clearest Bittensor use case."
+    },
+    {
+      "netuid": "3",
+      "name": "deprecated",
+      "symbol": "\u03b3",
+      "price_tao": 0.024059664,
+      "price_usd": 5.9913,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "4",
+      "name": "Targon",
+      "symbol": "\u03b4",
+      "price_tao": 0.058158955,
+      "price_usd": 14.4827,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Incentivized compute marketplace via Targon VM",
+      "fundamental_low_usd": 1.6874,
+      "fundamental_high_usd": 8.4372,
+      "fundamental_mid_usd": 5.0623,
+      "uid_fill_pct": 100.0,
+      "verdict": "Expensive",
+      "risk_flags": [
+        "\ud83d\udfe0 Price above fundamental range but <2\u00d7"
+      ],
+      "notes": "AWS EC2 / Akash Network / Render Network competitor. Large TAM but commoditized."
+    },
+    {
+      "netuid": "5",
+      "name": "Hone",
+      "symbol": "\u03b5",
+      "price_tao": 0.019398105,
+      "price_usd": 4.8305,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "6",
+      "name": "Numinous",
+      "symbol": "\u03b6",
+      "price_tao": 0.005206294,
+      "price_usd": 1.2965,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "7",
+      "name": "Allways",
+      "symbol": "\u03b7",
+      "price_tao": 0.004422628,
+      "price_usd": 1.1013,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "8",
+      "name": "Vanta",
+      "symbol": "\u03b8",
+      "price_tao": 0.036704972,
+      "price_usd": 9.1403,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Decentralized liquidity and execution for prop firms",
+      "fundamental_low_usd": 0.8437,
+      "fundamental_high_usd": 4.2186,
+      "fundamental_mid_usd": 2.5312,
+      "uid_fill_pct": 100.0,
+      "verdict": "Bubble",
+      "risk_flags": [
+        "\ud83d\udd34 Price >2\u00d7 upper fundamental bound"
+      ],
+      "notes": "Prop firm execution infrastructure. Very hard sell \u2014 firms are paranoid about quality."
+    },
+    {
+      "netuid": "9",
+      "name": "iota",
+      "symbol": "\u03b9",
+      "price_tao": 0.023636946,
+      "price_usd": 5.8861,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "10",
+      "name": "Swap",
+      "symbol": "\u03ba",
+      "price_tao": 0.006225288,
+      "price_usd": 1.5502,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "11",
+      "name": "TrajectoryRL",
+      "symbol": "\u03bb",
+      "price_tao": 0.013379739,
+      "price_usd": 3.3318,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "12",
+      "name": "Compute Horde",
+      "symbol": "\u03bc",
+      "price_tao": 0.006716286,
+      "price_usd": 1.6725,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "13",
+      "name": "Data Universe",
+      "symbol": "\u03bd",
+      "price_tao": 0.008227405,
+      "price_usd": 2.0488,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "14",
+      "name": "TAOHash",
+      "symbol": "\u30c6",
+      "price_tao": 0.009218338,
+      "price_usd": 2.2956,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "15",
+      "name": "ORO",
+      "symbol": "\u03bf",
+      "price_tao": 0.034190565,
+      "price_usd": 8.5141,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data for OpEx proxy."
+    },
+    {
+      "netuid": "16",
+      "name": "BitAds",
+      "symbol": "\u03c0",
+      "price_tao": 0.00471593,
+      "price_usd": 1.1744,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "17",
+      "name": "404\u2014GEN",
+      "symbol": "\u03c1",
+      "price_tao": 0.014995967,
+      "price_usd": 3.7343,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "18",
+      "name": "Zeus",
+      "symbol": "\u03c3",
+      "price_tao": 0.006988429,
+      "price_usd": 1.7403,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "19",
+      "name": "blockmachine",
+      "symbol": "t",
+      "price_tao": 0.015098763,
+      "price_usd": 3.7599,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "20",
+      "name": "GroundLayer",
+      "symbol": "\u03c5",
+      "price_tao": 0.00408041,
+      "price_usd": 1.0161,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "21",
+      "name": "AdTAO",
+      "symbol": "\u03c6",
+      "price_tao": 0.004935381,
+      "price_usd": 1.229,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "22",
+      "name": "Desearch",
+      "symbol": "\u03c7",
+      "price_tao": 0.005131652,
+      "price_usd": 1.2779,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "23",
+      "name": "Trishool",
+      "symbol": "\u03c8",
+      "price_tao": 0.003964517,
+      "price_usd": 0.9872,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "24",
+      "name": "Quasar",
+      "symbol": "\u03c9",
+      "price_tao": 0.016005087,
+      "price_usd": 3.9856,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "25",
+      "name": "Mainframe",
+      "symbol": "\u05d0",
+      "price_tao": 0.004851988,
+      "price_usd": 1.2082,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "26",
+      "name": "beqar",
+      "symbol": "\u05d1",
+      "price_tao": 0.003366071,
+      "price_usd": 0.8382,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "27",
+      "name": "Nodexo",
+      "symbol": "\u05d2",
+      "price_tao": 0.004278549,
+      "price_usd": 1.0654,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "28",
+      "name": "gm",
+      "symbol": "\u05d3",
+      "price_tao": 0.011332156,
+      "price_usd": 2.8219,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "29",
+      "name": "Coldint",
+      "symbol": "\u05d4",
+      "price_tao": 0.013879304,
+      "price_usd": 3.4562,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "30",
+      "name": "Pending",
+      "symbol": "\u05d5",
+      "price_tao": 0.004722724,
+      "price_usd": 1.1761,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "31",
+      "name": "Halftime",
+      "symbol": "\u05d6",
+      "price_tao": 0.004738117,
+      "price_usd": 1.1799,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "32",
+      "name": "ItsAI",
+      "symbol": "\u05d7",
+      "price_tao": 0.00370767,
+      "price_usd": 0.9233,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "33",
+      "name": "ReadyAI",
+      "symbol": "\u05d8",
+      "price_tao": 0.008331647,
+      "price_usd": 2.0747,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "34",
+      "name": "BitMind",
+      "symbol": "\u05d9",
+      "price_tao": 0.014105329,
+      "price_usd": 3.5125,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "AI / mind-related subnet",
+      "fundamental_low_usd": 0.4219,
+      "fundamental_high_usd": 1.6874,
+      "fundamental_mid_usd": 1.0546,
+      "uid_fill_pct": 100.0,
+      "verdict": "Bubble",
+      "risk_flags": [
+        "\ud83d\udd34 Price >2\u00d7 upper fundamental bound"
+      ],
+      "notes": "Comparable to boutique AI model development."
+    },
+    {
+      "netuid": "35",
+      "name": "OxMarkets",
+      "symbol": "\u05da",
+      "price_tao": 0.006401908,
+      "price_usd": 1.5942,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "36",
+      "name": "automata",
+      "symbol": "\u05db",
+      "price_tao": 0.006840097,
+      "price_usd": 1.7033,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 24.61,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "37",
+      "name": "Aurelius",
+      "symbol": "\u05dc",
+      "price_tao": 0.004163657,
+      "price_usd": 1.0368,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "38",
+      "name": "colosseum",
+      "symbol": "\u05dd",
+      "price_tao": 0.011369419,
+      "price_usd": 2.8312,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "39",
+      "name": "deprecated",
+      "symbol": "\u05de",
+      "price_tao": 0.006533074,
+      "price_usd": 1.6269,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "40",
+      "name": "Chunking",
+      "symbol": "\u05df",
+      "price_tao": 0.003423333,
+      "price_usd": 0.8525,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "41",
+      "name": "Almanac",
+      "symbol": "\u05e0",
+      "price_tao": 0.005415172,
+      "price_usd": 1.3485,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "42",
+      "name": "Unknown",
+      "symbol": "\u05e1",
+      "price_tao": 0.003613353,
+      "price_usd": 0.8998,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "43",
+      "name": "Graphite",
+      "symbol": "\u05e2",
+      "price_tao": 0.006147211,
+      "price_usd": 1.5308,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "44",
+      "name": "Score",
+      "symbol": "\u05e3",
+      "price_tao": 0.034576587,
+      "price_usd": 8.6103,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "45",
+      "name": "Talisman AI",
+      "symbol": "\u05e4",
+      "price_tao": 0.004179578,
+      "price_usd": 1.0408,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "46",
+      "name": "RESI",
+      "symbol": "\u05e5",
+      "price_tao": 0.006668233,
+      "price_usd": 1.6605,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "47",
+      "name": "EvolAI",
+      "symbol": "\u05e6",
+      "price_tao": 0.004942893,
+      "price_usd": 1.2309,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 18.75,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "48",
+      "name": "Quantum Compute",
+      "symbol": "\u05e7",
+      "price_tao": 0.005368211,
+      "price_usd": 1.3368,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "49",
+      "name": "Nepher Robotics",
+      "symbol": "\u05e8",
+      "price_tao": 0.00528259,
+      "price_usd": 1.3155,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "50",
+      "name": "Synth",
+      "symbol": "\u05e9",
+      "price_tao": 0.008892013,
+      "price_usd": 2.2143,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "51",
+      "name": "lium.io",
+      "symbol": "\u05ea",
+      "price_tao": 0.056111478,
+      "price_usd": 13.9729,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "52",
+      "name": "Dojo",
+      "symbol": "\u0627",
+      "price_tao": 0.007305758,
+      "price_usd": 1.8193,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "53",
+      "name": "EfficientFrontier",
+      "symbol": "\u0628",
+      "price_tao": 0.005193926,
+      "price_usd": 1.2934,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "54",
+      "name": "Yanez MIID",
+      "symbol": "\u062a",
+      "price_tao": 0.006336297,
+      "price_usd": 1.5779,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "55",
+      "name": "NIOME",
+      "symbol": "\u062b",
+      "price_tao": 0.003531499,
+      "price_usd": 0.8794,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "56",
+      "name": "Gradients",
+      "symbol": "\u062c",
+      "price_tao": 0.02171234,
+      "price_usd": 5.4068,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "57",
+      "name": "Sparket.AI",
+      "symbol": "\u062d",
+      "price_tao": 0.003169401,
+      "price_usd": 0.7892,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "58",
+      "name": "Handshake",
+      "symbol": "\u062e",
+      "price_tao": 0.004815061,
+      "price_usd": 1.199,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "59",
+      "name": "Babelbit",
+      "symbol": "\u062f",
+      "price_tao": 0.003973445,
+      "price_usd": 0.9895,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "60",
+      "name": "Bitsec.ai",
+      "symbol": "\u0630",
+      "price_tao": 0.004607382,
+      "price_usd": 1.1473,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "61",
+      "name": "RedTeam",
+      "symbol": "\u0631",
+      "price_tao": 0.00424158,
+      "price_usd": 1.0562,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "62",
+      "name": "Ridges",
+      "symbol": "\u0632",
+      "price_tao": 0.028935121,
+      "price_usd": 7.2054,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Watch list \u2014 active but use case unclear."
+    },
+    {
+      "netuid": "63",
+      "name": "Enigma",
+      "symbol": "\u0633",
+      "price_tao": 0.0093997,
+      "price_usd": 2.3407,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "64",
+      "name": "Chutes",
+      "symbol": "\u0634",
+      "price_tao": 0.082831506,
+      "price_usd": 20.6267,
+      "tao_price_usd": 249.02,
+      "stage": "Maturing",
+      "use_case": "Decentralized AI inference at scale",
+      "fundamental_low_usd": 4.2186,
+      "fundamental_high_usd": 16.8744,
+      "fundamental_mid_usd": 10.5465,
+      "uid_fill_pct": 100.0,
+      "verdict": "Expensive",
+      "risk_flags": [
+        "\ud83d\udfe0 Price above fundamental range but <2\u00d7"
+      ],
+      "notes": "Direct competitor to centralized inference APIs. Highest legitimate subnet price."
+    },
+    {
+      "netuid": "65",
+      "name": "TAO Private Network",
+      "symbol": "\u0635",
+      "price_tao": 0.004144861,
+      "price_usd": 1.0322,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "66",
+      "name": "ninja",
+      "symbol": "\u0636",
+      "price_tao": 0.014769264,
+      "price_usd": 3.6778,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Speculative \u2014 no discernible use case."
+    },
+    {
+      "netuid": "67",
+      "name": "Harnyx",
+      "symbol": "\u0637",
+      "price_tao": 0.008217953,
+      "price_usd": 2.0464,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "68",
+      "name": "NOVA",
+      "symbol": "\u0638",
+      "price_tao": 0.016819475,
+      "price_usd": 4.1884,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "69",
+      "name": "ain",
+      "symbol": "\u0639",
+      "price_tao": 0.003308782,
+      "price_usd": 0.824,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "70",
+      "name": "NexisGen",
+      "symbol": "\u063a",
+      "price_tao": 0.00672783,
+      "price_usd": 1.6754,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 70.31,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "71",
+      "name": "Leadpoet",
+      "symbol": "\u3134",
+      "price_tao": 0.006740408,
+      "price_usd": 1.6785,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "72",
+      "name": "StreetVision by NATIX",
+      "symbol": "\u0642",
+      "price_tao": 0.003359005,
+      "price_usd": 0.8365,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "73",
+      "name": "MetaHash",
+      "symbol": "\u0643",
+      "price_tao": 0.004603045,
+      "price_usd": 1.1463,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "74",
+      "name": "Gittensor",
+      "symbol": "\u0644",
+      "price_tao": 0.006599498,
+      "price_usd": 1.6434,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "75",
+      "name": "Hippius",
+      "symbol": "\u0645",
+      "price_tao": 0.024493543,
+      "price_usd": 6.0994,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "76",
+      "name": "Byzantium",
+      "symbol": "\u0646",
+      "price_tao": 0.005990435,
+      "price_usd": 1.4917,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 16.8,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "77",
+      "name": "Liquidity",
+      "symbol": "\u0647",
+      "price_tao": 0.004274778,
+      "price_usd": 1.0645,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "78",
+      "name": "Vocence",
+      "symbol": "\u0648",
+      "price_tao": 0.008189538,
+      "price_usd": 2.0394,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 16.8,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "79",
+      "name": "MVTRX",
+      "symbol": "\u064a",
+      "price_tao": 0.005705538,
+      "price_usd": 1.4208,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "80",
+      "name": "dogelayer",
+      "symbol": "\u0649",
+      "price_tao": 0.003724819,
+      "price_usd": 0.9276,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 87.89,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "81",
+      "name": "deprecated",
+      "symbol": "\u16a0",
+      "price_tao": 0.00858008,
+      "price_usd": 2.1366,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "82",
+      "name": "uruz",
+      "symbol": "\u16a2",
+      "price_tao": 0.00878709,
+      "price_usd": 2.1882,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 5.08,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "83",
+      "name": "CliqueAI",
+      "symbol": "\u16a6",
+      "price_tao": 0.005221912,
+      "price_usd": 1.3004,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "84",
+      "name": "ChipForge (Tatsu)",
+      "symbol": "\u30e2",
+      "price_tao": 0.003199805,
+      "price_usd": 0.7968,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "85",
+      "name": "Vidaio",
+      "symbol": "\u16b1",
+      "price_tao": 0.012095387,
+      "price_usd": 3.012,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "86",
+      "name": "\u2692",
+      "symbol": "\u16b3",
+      "price_tao": 0.004034644,
+      "price_usd": 1.0047,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "87",
+      "name": "Luminar Network",
+      "symbol": "\u042b",
+      "price_tao": 0.003893418,
+      "price_usd": 0.9695,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "88",
+      "name": "Investing",
+      "symbol": "\u16c9",
+      "price_tao": 0.003684921,
+      "price_usd": 0.9176,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "89",
+      "name": "InfiniteHash",
+      "symbol": "\u16d2",
+      "price_tao": 0.00377042,
+      "price_usd": 0.9389,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "90",
+      "name": "ogham",
+      "symbol": "\u1680",
+      "price_tao": 0.004477631,
+      "price_usd": 1.115,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "91",
+      "name": "Bitstarter #1",
+      "symbol": "\u1681",
+      "price_tao": 0.011547083,
+      "price_usd": 2.8755,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "92",
+      "name": "TensorClaw",
+      "symbol": "\u1682",
+      "price_tao": 0.00394531,
+      "price_usd": 0.9825,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "93",
+      "name": "Bitcast",
+      "symbol": "\u1683",
+      "price_tao": 0.014610208,
+      "price_usd": 3.6382,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "94",
+      "name": "Bitsota",
+      "symbol": "\u1684",
+      "price_tao": 0.003617407,
+      "price_usd": 0.9008,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "95",
+      "name": "nion",
+      "symbol": "\u1685",
+      "price_tao": 0.027633853,
+      "price_usd": 6.8814,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "96",
+      "name": "Verathos",
+      "symbol": "\u169b",
+      "price_tao": 2.966089785,
+      "price_usd": 738.6157,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 97.66,
+      "verdict": "Bubble",
+      "risk_flags": [
+        "\ud83d\udd34 Bubble risk \u2014 speculative with no identifiable OpEx replacement"
+      ],
+      "notes": "Price is 741x cheapest subnets. No public info justifying this. Bubble/unjustified."
+    },
+    {
+      "netuid": "97",
+      "name": "distil",
+      "symbol": "\u10d0",
+      "price_tao": 0.048579724,
+      "price_usd": 12.0973,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "98",
+      "name": "ForeverMoney",
+      "symbol": "\u10d1",
+      "price_tao": 0.004235424,
+      "price_usd": 1.0547,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "99",
+      "name": "Leoma",
+      "symbol": "\u10d2",
+      "price_tao": 0.006069642,
+      "price_usd": 1.5115,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "100",
+      "name": "Pla\u03c4form",
+      "symbol": "\u10d3",
+      "price_tao": 0.014988781,
+      "price_usd": 3.7325,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "101",
+      "name": "eni",
+      "symbol": "\u10d4",
+      "price_tao": 0.004057193,
+      "price_usd": 1.0103,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "102",
+      "name": "ConnitoAI",
+      "symbol": "\u10d5",
+      "price_tao": 0.013695038,
+      "price_usd": 3.4103,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "103",
+      "name": "Djinn",
+      "symbol": "\u0531",
+      "price_tao": 0.005769276,
+      "price_usd": 1.4367,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "104",
+      "name": "for sale (burn to uid1)",
+      "symbol": "\u0532",
+      "price_tao": 0.003711996,
+      "price_usd": 0.9244,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "105",
+      "name": "Beam",
+      "symbol": "\u0533",
+      "price_tao": 0.01000925,
+      "price_usd": 2.4925,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "106",
+      "name": "VoidAI",
+      "symbol": "\u0534",
+      "price_tao": 0.004202177,
+      "price_usd": 1.0464,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "107",
+      "name": "Minos",
+      "symbol": "\u30df",
+      "price_tao": 0.016108092,
+      "price_usd": 4.0112,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "108",
+      "name": "TalkHead",
+      "symbol": "\u0536",
+      "price_tao": 0.004040895,
+      "price_usd": 1.0063,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 48.83,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "109",
+      "name": "Academia",
+      "symbol": "\u055e",
+      "price_tao": 0.00414439,
+      "price_usd": 1.032,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "110",
+      "name": "Green Compute",
+      "symbol": "\u0400",
+      "price_tao": 0.005916199,
+      "price_usd": 1.4733,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "111",
+      "name": "oneoneone",
+      "symbol": "\u0401",
+      "price_tao": 0.004256891,
+      "price_usd": 1.0601,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "112",
+      "name": "minotaur",
+      "symbol": "\u0402",
+      "price_tao": 0.005380116,
+      "price_usd": 1.3398,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "113",
+      "name": "TensorUSD",
+      "symbol": "\u0403",
+      "price_tao": 0.004984061,
+      "price_usd": 1.2411,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 49.22,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "114",
+      "name": "SOMA",
+      "symbol": "\u0404",
+      "price_tao": 0.009724775,
+      "price_usd": 2.4217,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Finance-adjacent name \u2014 possible regulatory risk."
+    },
+    {
+      "netuid": "115",
+      "name": "HashiChain",
+      "symbol": "\u0405",
+      "price_tao": 0.007900633,
+      "price_usd": 1.9674,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "116",
+      "name": "TaoLend",
+      "symbol": "\u2d35",
+      "price_tao": 0.00362445,
+      "price_usd": 0.9026,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "117",
+      "name": "BrainPlay",
+      "symbol": "\u2c80",
+      "price_tao": 0.003388612,
+      "price_usd": 0.8438,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Speculative \u2014 no discernible use case."
+    },
+    {
+      "netuid": "118",
+      "name": "HODL",
+      "symbol": "\u2c81",
+      "price_tao": 0.004012443,
+      "price_usd": 0.9992,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "119",
+      "name": "Satori",
+      "symbol": "\u2c82",
+      "price_tao": 0.006173402,
+      "price_usd": 1.5373,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "120",
+      "name": "Affine",
+      "symbol": "\u2d37",
+      "price_tao": 0.071558006,
+      "price_usd": 17.8194,
+      "tao_price_usd": 249.02,
+      "stage": "Early",
+      "use_case": "Unknown / limited public information",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": "Insufficient data."
+    },
+    {
+      "netuid": "121",
+      "name": "sundae_bar",
+      "symbol": "\u2c84",
+      "price_tao": 0.007139824,
+      "price_usd": 1.778,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "122",
+      "name": "Bitrecs",
+      "symbol": "\u2c85",
+      "price_tao": 0.003356199,
+      "price_usd": 0.8358,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "123",
+      "name": "MANTIS",
+      "symbol": "\ud804\udc00",
+      "price_tao": 0.004482998,
+      "price_usd": 1.1164,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "124",
+      "name": "Swarm",
+      "symbol": "\ud804\udc01",
+      "price_tao": 0.007180798,
+      "price_usd": 1.7882,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "125",
+      "name": "8 Ball",
+      "symbol": "\ud804\udc02",
+      "price_tao": 0.005826854,
+      "price_usd": 1.451,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "126",
+      "name": "Poker44",
+      "symbol": "\ud804\udc03",
+      "price_tao": 0.006770657,
+      "price_usd": 1.686,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "127",
+      "name": "Astrid",
+      "symbol": "\ud804\udc05",
+      "price_tao": 0.004883234,
+      "price_usd": 1.216,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    },
+    {
+      "netuid": "128",
+      "name": "ByteLeap",
+      "symbol": "\u0db1",
+      "price_tao": 0.003331294,
+      "price_usd": 0.8296,
+      "tao_price_usd": 249.02,
+      "stage": "Speculative",
+      "use_case": "",
+      "fundamental_low_usd": 0.0,
+      "fundamental_high_usd": 0.0,
+      "fundamental_mid_usd": 0.0,
+      "uid_fill_pct": 100.0,
+      "verdict": "Speculative",
+      "risk_flags": [
+        "\ud83d\udfe1 Speculative \u2014 no OpEx data, purely option value"
+      ],
+      "notes": ""
+    }
+  ]
+}

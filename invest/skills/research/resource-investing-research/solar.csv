@@ -1,0 +1,8 @@
+ticker,name,sector,jurisdiction,market_cap_b,score_people,score_property,score_politics,score_phinance,score_paper,composite_score,rating,last_close,change_pct,target_entry,target_scale_in,target_full,position_size_pct,notes,vs_target,nav_per_share
+FSLR,First Solar,Solar Modules,USA/Malaysia,18,4,5,4,4,3,4.0,Core,196.19,3.49,301.46,339.15,376.83,7,US manufacturing; IRA beneficiary; thin-film leader; quality,AT/BUY,376.83
+ENPH,Enphase Energy,Microinverters,USA,8,4,4,3,3,4,3.6,Satellite,36.16,1.67,34.89,39.25,43.61,4,Microinverter leader; demand pause; inventory correction ongoing,NEAR,43.61
+SEDG,SolarEdge,Power Optimizers,Israel/USA,2,3,3,3,2,4,3.0,Satellite,47.36,9.45,12.57,14.14,15.71,2,Losses widening; market share pressure; turnaround bet only,ABOVE,15.71
+RUN,Sunrun,Residential Solar,USA,2,3,3,3,2,3,2.8,Speculative,12.96,1.41,16.56,18.63,20.7,2,NEM 3.0 headwinds; financing model under pressure; avoid for now,AT/BUY,20.7
+SHLS,Shoals Technologies,BOS/Electrification,USA,2,4,4,3,3,3,3.4,Satellite,7.78,2.23,9.97,11.21,12.46,3,EBOS leader; data center + solar convergence; solid mgmt,AT/BUY,12.46
+ICLN,iShares Global Clean Energy ETF,ETF,Global,3,3,3,3,3,3,3.0,Satellite,20.14,1.05,,,,3,Diversified clean energy; use for broad exposure,,
+TAN,Invesco Solar ETF,ETF,Global,0.8,3,3,3,3,3,3.0,Satellite,58.6,2.36,,,,2,Concentrated solar; higher beta than ICLN,,

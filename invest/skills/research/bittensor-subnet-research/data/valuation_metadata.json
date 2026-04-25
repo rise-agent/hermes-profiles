@@ -1,0 +1,220 @@
+{
+  "subnets": {
+    "0": {
+      "name": "Root",
+      "symbol": "\u03a4",
+      "use_case": "TAO staking, validator rewards, network security",
+      "stage": "Root",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Not a subnet token — value = PV of all future subnet emissions + staking yield. Metcalfe's Law × network growth."
+    },
+    "1": {
+      "name": "Apex",
+      "symbol": "\u03b1",
+      "use_case": "Algorithmic and agentic optimization competitions",
+      "stage": "Early",
+      "comparable_opex_annual_usd": [500000, 2000000],
+      "fundamental_notes": "Comparable to internal quant development / Kaggle-style prize pools. Niche but active community."
+    },
+    "2": {
+      "name": "DSperse",
+      "symbol": "\u03b2",
+      "use_case": "Verifiable distributed LLM inference",
+      "stage": "Early",
+      "comparable_opex_annual_usd": [600000, 2400000],
+      "fundamental_notes": "Replacement for OpenAI/Anthropic/Together AI API spend. Clearest Bittensor use case."
+    },
+    "4": {
+      "name": "Targon",
+      "symbol": "\u03b4",
+      "use_case": "Incentivized compute marketplace via Targon VM",
+      "stage": "Early",
+      "comparable_opex_annual_usd": [2000000, 10000000],
+      "fundamental_notes": "AWS EC2 / Akash Network / Render Network competitor. Large TAM but commoditized."
+    },
+    "8": {
+      "name": "Vanta",
+      "symbol": "\u03b8",
+      "use_case": "Decentralized liquidity and execution for prop firms",
+      "stage": "Early",
+      "comparable_opex_annual_usd": [1000000, 5000000],
+      "fundamental_notes": "Prop firm execution infrastructure. Very hard sell — firms are paranoid about quality."
+    },
+    "15": {
+      "name": "ORO",
+      "symbol": "\u03bf",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data for OpEx proxy."
+    },
+    "34": {
+      "name": "BitMind",
+      "symbol": "\u05d9",
+      "use_case": "AI / mind-related subnet",
+      "stage": "Early",
+      "comparable_opex_annual_usd": [500000, 2000000],
+      "fundamental_notes": "Comparable to boutique AI model development."
+    },
+    "44": {
+      "name": "Score",
+      "symbol": "\u05e3",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "51": {
+      "name": "lium.io",
+      "symbol": "\u05ea",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "56": {
+      "name": "Gradients",
+      "symbol": "\u062c",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "62": {
+      "name": "Ridges",
+      "symbol": "\u05d6",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Watch list — active but use case unclear."
+    },
+    "64": {
+      "name": "Chutes",
+      "symbol": "\u0634",
+      "use_case": "Decentralized AI inference at scale",
+      "stage": "Maturing",
+      "comparable_opex_annual_usd": [5000000, 20000000],
+      "fundamental_notes": "Direct competitor to centralized inference APIs. Highest legitimate subnet price."
+    },
+    "66": {
+      "name": "ninja",
+      "symbol": "\u0636",
+      "use_case": "Unknown / limited public information",
+      "stage": "Speculative",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Speculative — no discernible use case."
+    },
+    "68": {
+      "name": "NOVA",
+      "symbol": "\u0638",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "75": {
+      "name": "Hippius",
+      "symbol": "\u0645",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "85": {
+      "name": "Vidaio",
+      "symbol": "\u16b1",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "91": {
+      "name": "Bitstarter #1",
+      "symbol": "\u16c1",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "93": {
+      "name": "Bitcast",
+      "symbol": "\u16c3",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "95": {
+      "name": "nion",
+      "symbol": "\u16c5",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "96": {
+      "name": "Verathos",
+      "symbol": "\u169b",
+      "use_case": "Unknown / limited public information",
+      "stage": "Speculative",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Price is 741x cheapest subnets. No public info justifying this. Bubble/unjustified."
+    },
+    "97": {
+      "name": "distil",
+      "symbol": "\u10d0",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "105": {
+      "name": "Beam",
+      "symbol": "\u0533",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "107": {
+      "name": "Minos",
+      "symbol": "\u30df",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    },
+    "114": {
+      "name": "SOMA",
+      "symbol": "\u0535",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Finance-adjacent name — possible regulatory risk."
+    },
+    "117": {
+      "name": "BrainPlay",
+      "symbol": "\u1532",
+      "use_case": "Unknown / limited public information",
+      "stage": "Speculative",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Speculative — no discernible use case."
+    },
+    "120": {
+      "name": "Affine",
+      "symbol": "\u2d37",
+      "use_case": "Unknown / limited public information",
+      "stage": "Early",
+      "comparable_opex_annual_usd": null,
+      "fundamental_notes": "Insufficient data."
+    }
+  },
+  "global_assumptions": {
+    "daily_mining_emissions": 2952,
+    "discount_rate_annual": 0.30,
+    "miner_sell_pressure_pct": 0.80,
+    "halving_years": 4,
+    "tao_fixed_supply_per_subnet": 21000000,
+    "emission_safety_margin": 0.10
+  }
+}
